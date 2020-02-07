@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "True Source",
+  "version": "0.0.0.1",
+  "description": "Find the source of truth.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["arrive.min.js", "event.js"]
+    }
+  ],
+
+  "permissions": ["activeTab"]
+}
